@@ -5,5 +5,7 @@ print "press y to go, then n to stop"
 start = raw_input("")
 while start == "y":
   RPL.servoWrite(motor, 2500)
-  if "n":
+  print "press y to go, then n to stop"
+  start1 = raw_input("")
+  if start1 == "n":
       RPL.servoWrite(motor, 0)
