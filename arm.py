@@ -1,7 +1,8 @@
 import setup
 import RoboPiLib as RPL
 motor = 1
-start = raw_input("press y to go, then n to stop")
+print "press y to go, then n to stop"
+start = raw_input("")
 while start == "y":
   RPL.servoWrite(motor, 1000)
   if "n":
