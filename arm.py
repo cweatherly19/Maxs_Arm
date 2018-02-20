@@ -8,4 +8,5 @@ while start == "y":
   print "press y to go, then n to stop"
   start1 = raw_input("")
   if start1 == "n":
-      RPL.servoWrite(motor, 0)
+    break
+    RPL.servoWrite(motor, 0)
