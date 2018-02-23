@@ -9,7 +9,6 @@ while start == "y":
   start1 = raw_input("")
   if start1 == "n":
     break
-    RPL.servoWrite(motor, 0)
   if start1 == "a":
     break
 while start == "a":
@@ -21,3 +20,6 @@ while start == "a":
     RPL.servoWrite(motor, 0)
   if start1 == "y":
     break
+while start == "n":
+  RPL.servoWrite(motor, 0)
+  break
