@@ -3,7 +3,7 @@ import RoboPiLib as RPL
 motor = 1
 print "press y to go down, press a to go up, or n to stop"
 start = raw_input("")
-while true:
+while True:
     while start == "y":
         RPL.servoWrite(motor, 2500)
         print "press n to stop"
