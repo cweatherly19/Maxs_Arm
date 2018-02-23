@@ -10,6 +10,8 @@ while start == "y":
   if start1 == "n":
     break
     RPL.servoWrite(motor, 0)
+  if start1 == "a":
+    break
 while start == "a":
   RPL.servoWrite(motor, 1000)
   print "press n to stop"
@@ -17,3 +19,5 @@ while start == "a":
   if start2 == "n":
     break
     RPL.servoWrite(motor, 0)
+  if start1 == "y":
+    break
