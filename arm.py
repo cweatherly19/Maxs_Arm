@@ -23,3 +23,5 @@ while true:
   while start == "n":
    RPL.servoWrite(motor, 0)
    break
+if rawinput("") == "x"
+  break
