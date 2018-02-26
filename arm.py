@@ -2,26 +2,16 @@ import setup
 import RoboPiLib as RPL
 motor = 1
 print "press y to go down, press a to go up, or n to stop"
-start = raw_input("")
 while True:
-    while start == "y":
+    while raw_input("") == "y":
         RPL.servoWrite(motor, 2500)
         print "press n to stop"
-        start1 = raw_input("")
-        if start1 == "n":
-            break
-        if start1 == "a":
-            break
-    while start == "a":
+        if raw_input("") == "a":
+            RPL.ServoWrite(motor, 1000)
+    while raw_input("") == "a":
         RPL.servoWrite(motor, 1000)
         print "press n to stop"
-        start2 = raw_input("")
-        if start2 == "n":
-            break
-        if start1 == "y":
-            break
-    while start == "n":
+        if raw_input("") == "y":
+            RPL.ServoWrite(motor, 2500)
+    while raw_input("") == "n":
         RPL.servoWrite(motor, 0)
-        break
-    if rawinput("") == "x":
-        break
