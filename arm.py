@@ -7,11 +7,11 @@ while True:
         RPL.servoWrite(motor, 2500)
         print "press n to stop"
         if raw_input("") == "a":
-            RPL.ServoWrite(motor, 1000)
+            RPL.servoWrite(motor, 1000)
     while raw_input("") == "a":
         RPL.servoWrite(motor, 1000)
         print "press n to stop"
         if raw_input("") == "y":
-            RPL.ServoWrite(motor, 2500)
+            RPL.servoWrite(motor, 2500)
     while raw_input("") == "n":
         RPL.servoWrite(motor, 0)
