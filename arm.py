@@ -2,7 +2,7 @@ import setup
 import RoboPiLib as RPL
 motor = 1
 print "press y to go down, press a to go up, n to stop, and x to end program"
-true == raw_input("")
+true = raw_input("")
 def arm_up(speed):
     speed = RPL.servoWrite(motor, 2000)
 def arm_down(speed):
