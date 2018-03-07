@@ -7,13 +7,17 @@ motor = 1
 print "press y to go down, press a to go up, n to stop"
 run = raw_input("> ")
 def arm_up( up ):
-    if run == "a" or "n"
-    arm_up(RPL.servoWrite(motor, 0))
-    return;
+    if run == "a" or "n":
+        arm_up(RPL.servoWrite(motor, 0))
+    return up
 def arm_down( down ):
-    return;
+    if run == "y" or "n":
+        arm_up(RPL.servoWrite(motor, 0))
+    return down
 def arm_stop( still ):
-    return;
+    if run == "y" or "a":
+        arm_up(RPL.servoWrite(motor, 0))
+    return still
 
 # arm_up()
 # arm_down()
