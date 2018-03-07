@@ -3,21 +3,16 @@ import RoboPiLib as RPL
 motor = 1
 print "press y to go down, press a to go up, n to stop"
 true = raw_input("> ")
-def arm_up():
-    try:
-        speed = RPL.servoWrite(motor, 2000)
-    except:
-        return ValueError("something happened that wasn't good")
-def arm_down():
-    try:
-        speed = RPL.servoWrite(motor, 1000)
-    except:
-        return ValueError("something happened")
-def arm_stop():
-    try:
-        speed = RPL.servoWrite(motor, 0)
-    except:
-        return ValueError("bloopy bloop")
+def arm_up( up ):
+    return;
+def arm_down( down ):
+    return;
+def arm_stop( still ):
+    return;
+
+arm_up(RPL.servoWrite(motor, 2000))
+arm_down(RPL.servoWrite(motor, 1000))
+arm_stop(RPL.servoWrite(motor, 0))
 
 while True:
     if true == "y":
