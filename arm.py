@@ -30,7 +30,6 @@ while True:
             arm_up(RPL.servoWrite(motor, 2000))
             print "y"
             run = raw_input("> ")
-            return run
     if run == "a":
         future = time.time() + 2
         while time.time() > future:
