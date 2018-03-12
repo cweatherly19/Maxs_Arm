@@ -13,8 +13,8 @@ def arm_up( up ):
         arm_up(RPL.servoWrite(motor, 2000))
         print "y"
         run = raw_input("> ")
-            if run == "a" or "n":
-                break
+        if run == "a" or "n":
+            break
 #the above should work
     return up
 def arm_down( down ):
