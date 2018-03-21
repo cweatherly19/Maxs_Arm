@@ -23,7 +23,7 @@ while z is 0:
     v = 1
     #turn right
     while v is 1 and command is "d":
-        run(RPL.servoWrite(motor2,1000))
+        run(RPL.servoWrite(motor2,800))
         print "insert new input"
         #breaks loop
         v = 2
@@ -33,7 +33,7 @@ while z is 0:
         continue
     #turn left
     while v is 1 and command is "a":
-        run(RPL.servoWrite(motor2,2800))
+        run(RPL.servoWrite(motor2,3000))
         print "insert new input"
         #breaks loop
         v = 2
