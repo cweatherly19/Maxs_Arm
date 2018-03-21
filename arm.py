@@ -23,14 +23,8 @@ while z is 0:
     v = 1
     #turn right
     while v is 1 and command is "d":
-        try:
-            run(RPL.servoWrite(motor2, 800))
-            print "insert new input"
-        except:
-            return(ValueError)
-        
-        #wait command?
-
+        run(RPL.servoWrite(motor2, 800))
+        print "insert new input"    
         #breaks loop
         v = 2
     #return to top of loop if "d"
