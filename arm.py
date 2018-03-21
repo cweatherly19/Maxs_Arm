@@ -23,8 +23,14 @@ while z is 0:
     v = 1
     #turn right
     while v is 1 and command is "d":
-        run(RPL.servoWrite(motor2,800))
-        print "insert new input"
+        try:
+            run(RPL.servoWrite(motor2, 800))
+            print "insert new input"
+        except:
+            return(ValueError)
+        
+        #wait command?
+
         #breaks loop
         v = 2
     #return to top of loop if "d"
@@ -33,7 +39,7 @@ while z is 0:
         continue
     #turn left
     while v is 1 and command is "a":
-        run(RPL.servoWrite(motor2,3000))
+        run(RPL.servoWrite(motor2, 3000))
         print "insert new input"
         #breaks loop
         v = 2
@@ -48,10 +54,10 @@ while z is 0:
         future = 1 + now
         #starts motor running
         while v is 1 and now < future:
-            speed(RPL.servoWrite(motor1,1000))
+            speed(RPL.servoWrite(motor1, 1000))
             #ends motor running
             while v is 1 and time.time() >= future:
-                speed(RPL.servoWrite(motor1,0))
+                speed(RPL.servoWrite(motor1, 0))
                 print "insert new input"
                 #breaks loops
                 v = 2
@@ -66,10 +72,10 @@ while z is 0:
         future = 1 + now
         #starts motor running
         while v is 1 and now < future:
-            speed(RPL.servoWrite(motor1,2000))
+            speed(RPL.servoWrite(motor1, 2000))
             #ends motor running
             while v is 1 and time.time() >= future:
-                speed(RPL.servoWrite(motor1,0))
+                speed(RPL.servoWrite(motor1, 0))
                 print "insert new input"
                 v = 2
     #return to top of loop if "s"
