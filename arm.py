@@ -6,7 +6,9 @@ motor1 = 1
 #left and right
 motor2 = 0
 #tells the commands
-print "press y to go down, press a to go up, and any other key to end code"
+print "press w to go down, press s to go up,
+print "a to go left, d to go right,
+print "and any other key to end code."
 #allows for inputs
 command = raw_input("> ")
 #reads the turn in the loop below
@@ -23,20 +25,28 @@ while z is 0:
     v = 1
     #turn right
     while v is 1 and command is "d":
-        run(RPL.servoWrite(motor2, 800))
-        print "insert new input"    
-        #breaks loop
-        v = 2
+        now = time.time()
+        future = 1 + now
+        #starts motor running
+        while v is 1 and now < future:
+            run(RPL.servoWrite(motor2, 800))
+            print "insert new input, then wait one second before entering another"
+            #breaks loop
+            v = 2
     #return to top of loop if "d"
     if command is "d":
         command = raw_input("> ")
         continue
     #turn left
     while v is 1 and command is "a":
-        run(RPL.servoWrite(motor2, 3000))
-        print "insert new input"
-        #breaks loop
-        v = 2
+        now = time.time()
+        future = 1 + now
+        #starts motor running
+        while v is 1 and now < future:
+            run(RPL.servoWrite(motor2, 3000))
+            print "insert new input, then wait one second before entering another"
+            #breaks loop
+            v = 2
     #return to top of loof if "a"
     if command is "a":
         command = raw_input("> ")
@@ -52,7 +62,7 @@ while z is 0:
             #ends motor running
             while v is 1 and time.time() >= future:
                 speed(RPL.servoWrite(motor1, 0))
-                print "insert new input"
+                print "insert new input, then wait one second before entering another"
                 #breaks loops
                 v = 2
     #return to top of loop if "w"
@@ -70,7 +80,7 @@ while z is 0:
             #ends motor running
             while v is 1 and time.time() >= future:
                 speed(RPL.servoWrite(motor1, 0))
-                print "insert new input"
+                print "insert new input, then wait one second before entering another"
                 v = 2
     #return to top of loop if "s"
     if command is "s":
