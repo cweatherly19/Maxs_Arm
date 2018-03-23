@@ -6,8 +6,8 @@ motor1 = 1
 #left and right
 motor2 = 0
 #tells the commands
-print "press w to go down, press s to go up,
-print "a to go left, d to go right,
+print "press w to go down, press s to go up,"
+print "a to go left, d to go right,"
 print "and any other key to end code."
 #allows for inputs
 command = raw_input("> ")
