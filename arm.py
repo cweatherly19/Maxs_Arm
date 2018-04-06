@@ -5,6 +5,8 @@ import RoboPiLib as RPL
 motor1 = 1
 #left and right
 motor2 = 0
+#to allow for interval turning
+turn = 800
 #tells the commands
 print "press w to go down, press s to go up,"
 print "a to go left, d to go right,"
@@ -29,7 +31,8 @@ while z is 0:
         future = 1 + now
         #starts motor running
         while v is 1 and now < future:
-            run(RPL.servoWrite(motor2, 800))
+            turn = turn + 200
+            run(RPL.servoWrite(motor2, turn))
             print "insert new input, then wait one second before entering another"
             #breaks loop
             v = 2
@@ -43,7 +46,8 @@ while z is 0:
         future = 1 + now
         #starts motor running
         while v is 1 and now < future:
-            run(RPL.servoWrite(motor2, 3000))
+            turn = turn - 200
+            run(RPL.servoWrite(motor2, turn))
             print "insert new input, then wait one second before entering another"
             #breaks loop
             v = 2
