@@ -32,6 +32,8 @@ while z is 0:
         #starts motor running
         while v is 1 and now < future:
             turn = turn + 200
+            if turn is 3000:
+                turn = 800
             run(RPL.servoWrite(motor2, turn))
             print "insert new input, then wait one second before entering another"
             #breaks loop
@@ -47,6 +49,8 @@ while z is 0:
         #starts motor running
         while v is 1 and now < future:
             turn = turn - 200
+            if turn is 800:
+                turn = 3000
             run(RPL.servoWrite(motor2, turn))
             print "insert new input, then wait one second before entering another"
             #breaks loop
