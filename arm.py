@@ -60,7 +60,7 @@ while z is 0:
         command = raw_input("> ")
         continue
     #go up
-    while v is 1 and command is "w":
+    while v is 1 and command is "s":
         #sets amount of time for motor to run
         now = time.time()
         future = 1 + now
@@ -74,11 +74,11 @@ while z is 0:
                 #breaks loops
                 v = 2
     #return to top of loop if "w"
-    if command is "w":
+    if command is "s":
         command = raw_input("> ")
         continue
     #go down
-    while v is 1 and command is "s":
+    while v is 1 and command is "w":
         #set emount of time for motor to run
         now = time.time()
         future = 1 + now
@@ -91,7 +91,7 @@ while z is 0:
                 print "insert new input, then wait one second before entering another"
                 v = 2
     #return to top of loop if "s"
-    if command is "s":
+    if command is "w":
         command = raw_input("> ")
         continue
     #stops code
