@@ -9,6 +9,7 @@ print "press w to go down, press s to go up,"
 print "a to go left, d to go right,"
 print "and any other key to end code."
 
+command = raw_input("> ")
 #allows code to break and stop completely
 z = 0
 #loop to run robot
@@ -17,34 +18,34 @@ while z is 0:
     v = 1
     RPL.servoWrite(motor1, 0)
     #turn right
-    while v is 1 and raw_input("> ") is "d":
+    while v is 1 and command is "d":
         RPL.servoWrite(motor2, 800)
         #breaks loop
-        if raw_input("> ") is not "d":
+        if command is not "d":
             v = 2
             continue
     #turn left
-    while v is 1 and raw_input("> ") is "a":
+    while v is 1 and command is "a":
         RPL.servoWrite(motor2, 3000)
         #breaks loop
-        if raw_input("> ") is not "a":
+        if command is not "a":
             v = 2
             continue
     #go up
-    while v is 1 and raw_input("> ") is "w":
+    while v is 1 and command is "w":
         RPL.servoWrite(motor1, 1000)
         #breaks loops
-        if raw_input("> ") is not "w":
+        if command is not "w":
             v = 2
             continue
     #go down
-    while v is 1 and raw_input("> ") is "s":
+    while v is 1 and command is "s":
         RPL.servoWrite(motor1, 2000)
-        if raw_input("> ") is not "s":
+        if command is not "s":
             v = 2
             continue
     #stops code
-    while raw_input("> ") is not "a" or "d" or "w" or "s":
+    while command is not "a" or "d" or "w" or "s":
         print "program stopping"
         z = 1
         break
