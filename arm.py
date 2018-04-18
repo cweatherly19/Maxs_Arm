@@ -9,11 +9,12 @@ print "press w to go down, press s to go up,"
 print "a to go left, d to go right,"
 print "and any other key to end code."
 
-command = raw_input("> ")
 #allows code to break and stop completely
 z = 0
 #loop to run robot
 while z is 0:
+    #allows code to be read
+    command = raw_input("> ")
     #allows individual loops to break
     v = 1
     RPL.servoWrite(motor1, 0)
