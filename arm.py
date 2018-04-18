@@ -38,13 +38,13 @@ while z is 0:
             v = 2
             continue
     #go down
-    while v is 1 and war_input("> ") is "s":
+    while v is 1 and raw_input("> ") is "s":
         RPL.servoWrite(motor1, 2000)
         if raw_input("> ") is not "s":
             v = 2
             continue
     #stops code
-    while command is not "a" or "d" or "w" or "s":
+    while raw_input("> ") is not "a" or "d" or "w" or "s":
         print "program stopping"
         z = 1
         break
