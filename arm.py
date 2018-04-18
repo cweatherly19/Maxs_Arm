@@ -26,29 +26,36 @@ while z is 0:
     while v is 1 and command is "d":
         run(RPL.servoWrite(motor2, 800))
         #breaks loop
-        if command is not "d":
-            v = 2
-            continue
+        v = 2
+    if command is "d":
+        command = raw_input("> ")
+        continue
     #turn left
     while v is 1 and command is "a":
         run(RPL.servoWrite(motor2, 3000))
         #breaks loop
         if command is not "a":
             v = 2
-            continue
+    if command is "a":
+        command = raw_input("> ")
+        continue
     #go up
     while v is 1 and command is "w":
         speed(RPL.servoWrite(motor1, 1000))
         #breaks loops
         if command is not "w":
             v = 2
-            continue
+    if command is "w":
+        command = raw_input("> ")
+        continue
     #go down
     while v is 1 and command is "s":
         speed(RPL.servoWrite(motor1, 2000))
         if command is not "s":
             v = 2
-            continue
+    if command is "s":
+        command = raw_input("> ")
+        continue
     #stops code
     while command is not "a" or "d" or "w" or "s":
         print "program stopping"
