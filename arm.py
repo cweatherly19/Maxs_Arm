@@ -43,7 +43,7 @@ while z is 0:
             continue
             v = 2
     #go down
-    while v is 1 and command is "s":
+    while v is 1 and raw_input("> ") is "s":
         speed(RPL.servoWrite(motor1, 2000))
         if raw_input("> ") is not "s":
             continue
