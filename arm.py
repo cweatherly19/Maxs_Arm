@@ -20,44 +20,36 @@ z = 0
 while z is 0:
     #allows individual loops to break
     v = 1
+    speed(RPL.servoWrite(motor1, 0))
     #turn right
     while v is 1 and raw_input("> ") is "d":
         run(RPL.servoWrite(motor2, 800))
         #breaks loop
         if raw_input("> ") is not "d":
+            continue
             v = 2
-    #return to top of loop if "d"
-    if raw_input("> ") is "a" or "s" or "w":
-        continue
     #turn left
     while v is 1 and raw_input("> ") is "a":
         run(RPL.servoWrite(motor2, 3000))
         #breaks loop
         if raw_input("> ") is not "a":
+            continue
             v = 2
-    #return to top of loof if "a"
-    if raw_input("> ") is "d" or "s" or "w":
-        continue
     #go up
     while v is 1 and raw_input("> ") is "w":
         speed(RPL.servoWrite(motor1, 1000))
         #breaks loops
         if raw_input("> ") is not "w":
+            continue
             v = 2
-    #return to top of loop if "w"
-    if raw_input("> ") is "a" or "s" or "d":
-        continue
     #go down
     while v is 1 and command is "s":
         speed(RPL.servoWrite(motor1, 2000))
         if raw_input("> ") is not "s":
+            continue
             v = 2
-    #return to top of loop if "s"
-    if raw_input("> ") is "a" or "w" or "d":
-        continue
     #stops code
     while command is not "a" or "d" or "w" or "s":
         print "program stopping"
-        speed(RPL.servoWrite(motor1,0))
         z = 1
         break
