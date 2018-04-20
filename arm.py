@@ -16,7 +16,7 @@ z = 0
 while z is 0:
     #allows individual loops to break
     v = 1
-    speed(RPL.servoWrite(motor1, 0))
+    RPL.servoWrite(motor1, 0)
     #turn right
     while v is 1 and command is "d":
         RPL.servoWrite(motor2, 800)
