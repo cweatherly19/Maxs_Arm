@@ -9,12 +9,7 @@ print "press w to go down, press s to go up,"
 print "a to go left, d to go right,"
 print "and any other key to end code."
 command = raw_input("> ")
-#reads the turn in the loop below
-def run( turn ):
-    return turn
-#reads the up and down in the loops
-def speed( go ):
-    return go
+
 #allows code to break and stop completely
 z = 0
 #loop to run robot
@@ -24,7 +19,7 @@ while z is 0:
     speed(RPL.servoWrite(motor1, 0))
     #turn right
     while v is 1 and command is "d":
-        run(RPL.servoWrite(motor2, 800))
+        RPL.servoWrite(motor2, 800)
         #breaks loop
         v = 2
     if command is "d":
@@ -32,7 +27,7 @@ while z is 0:
         continue
     #turn left
     while v is 1 and command is "a":
-        run(RPL.servoWrite(motor2, 3000))
+        RPL.servoWrite(motor2, 3000)
         #breaks loop
         if command is not "a":
             v = 2
@@ -41,7 +36,7 @@ while z is 0:
         continue
     #go up
     while v is 1 and command is "w":
-        speed(RPL.servoWrite(motor1, 1000))
+        RPL.servoWrite(motor1, 1000)
         #breaks loops
         if command is not "w":
             v = 2
@@ -50,7 +45,7 @@ while z is 0:
         continue
     #go down
     while v is 1 and command is "s":
-        speed(RPL.servoWrite(motor1, 2000))
+        RPL.servoWrite(motor1, 2000)
         if command is not "s":
             v = 2
     if command is "s":
