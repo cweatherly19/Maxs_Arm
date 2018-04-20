@@ -29,13 +29,13 @@ while z is 0:
     #go up
     while command is "w":
         RPL.servoWrite(motor1, 1000)
-        #breaks loops
+        #breaks loop
         command = raw_input("> ")
         continue
     #go down
     while command is "s":
         RPL.servoWrite(motor1, 2000)
-        if command is not "s":
+        #break loop
         command = raw_input("> ")
         continue
     #stops code
