@@ -20,8 +20,6 @@ while key != ord('q'):
     key = screen.getch()
     #so the code can read without hitting return
     screen.refresh()
-    #to stop the motors from moving
-    RPL.servoWrite(motor1, 0)
     #so that you can read the keys and use the functions
     while key == ord('w'):
         RPL.servoWrite(motor1, 1000)
@@ -39,5 +37,7 @@ while key != ord('q'):
         RPL.servoWrite(motor2, 800)
         screen.refresh()
         break
+    #so the robot will stop
+    RPL.servoWrite(motor1, 0)
 
 curses.endwin()
