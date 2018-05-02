@@ -24,13 +24,13 @@ while key != ord('q'):
         position2 = position2 + 10
         if position2 > 3000:
             position2 = 800
-        RPL.servoWrite(motor2, position)
+        RPL.servoWrite(motor2, position2)
     if key == ord('s'):
         RPL.servoWrite(motor1, 2000)
     if key == ord('d'):
         position2 = position2 - 10
         if position2 < 800:
             position2 = 3000
-        RPL.servoWrite(motor2, n)
+        RPL.servoWrite(motor2, position2)
 #to reformat the terminal/end the curses program
 curses.endwin()
