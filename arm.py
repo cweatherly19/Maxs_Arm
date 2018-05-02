@@ -10,7 +10,7 @@ position2 = 800
 #to define the 'screen' in front of functions
 screen = curses.initscr()
 #to tell the user valid inputs
-screen.addstr('Hit q to quit. Use the w, a, s, and d to move. Hit e to find positions of motor 2')
+screen.addstr('Hit q to quit. Use the w, a, s, and d to move. Value of Motor 2: %d' %position2)
 #to read key inputs
 key = ''
 #to end loop if 'q' is hit
@@ -18,7 +18,7 @@ while key != ord('q'):
     #so the key can be read
     key = screen.getch()
     screen.clear()
-    screen.addstr('Hit q to quit. Use the w, a, s, and d to move. Hit e to find positions of motor 2')
+    screen.addstr('Hit q to quit. Use the w, a, s, and d to move. Position of Motor 2: %d' %position2)
     screen.addstr('Detected key: ')
     #to define what keys preform commands
     if key == ord('w'):
@@ -42,8 +42,5 @@ while key != ord('q'):
             position2 = 3000
         RPL.servoWrite(motor2, position2)
     RPL.servoWrite(motor1, 0)
-    if key == ord('e'):
-        screen.addstr('e key')
-        screen.addstr('Value of motor 2: %d' %position2)
 #to reformat the terminal/end the curses program
 curses.endwin()
