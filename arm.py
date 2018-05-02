@@ -22,6 +22,7 @@ while key != ord('q'):
         RPL.servoWrite(motor1, 1000)
     if key == ord('a'):
         position2 = position2 + 50
+        #to allow for a full rotation
         if position2 > 3000:
             position2 = 800
         RPL.servoWrite(motor2, position2)
@@ -29,10 +30,10 @@ while key != ord('q'):
         RPL.servoWrite(motor1, 2000)
     if key == ord('d'):
         position2 = position2 - 50
+        #to allow for a full rotation
         if position2 < 800:
             position2 = 3000
         RPL.servoWrite(motor2, position2)
-    if key == ord(''):
-        RPL.servoWrite(motor1, 0)
+    RPL.servoWrite(motor1, 0)
 #to reformat the terminal/end the curses program
 curses.endwin()
