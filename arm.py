@@ -9,7 +9,7 @@ position2 = 800
 #to define the 'screen' in front of functions
 screen = curses.initscr()
 #to tell the user valid inputs
-screen.addstr('Hit q to quit. Use the W, A, S, and D to move.'')
+screen.addstr('Hit q to quit. Use the W, A, S, and D to move.')
 #to read key inputs
 key = ''
 #to end loop if 'q' is hit
