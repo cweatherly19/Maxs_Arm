@@ -3,7 +3,8 @@ import curses
 import setup
 import RoboPiLib as RPL
 # to define motor pins
-motor1 = 0, motor2 = 1
+motor1 = 0
+motor2 = 1
 # to define motor2 position
 position2 = 800
 #to define the 'screen' in front of functions
