@@ -45,7 +45,7 @@ while key != ord('q'):
         if position2 < 800:
             position2 = 3000
         RPL.servoWrite(motor2, position2)
-    if now > 0.01:
+    if now => time.time() + 0.01:
         RPL.servoWrite(motor1, 0)
 #to reformat the terminal/end the curses program
 curses.endwin()
