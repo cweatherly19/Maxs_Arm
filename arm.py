@@ -1,5 +1,6 @@
 #to access and establish files needed to run the code
 import curses
+import time
 import setup
 import RoboPiLib as RPL
 # to define motor pins
@@ -17,6 +18,7 @@ key = ''
 while key != ord('q'):
     #so the key can be read
     key = screen.getch()
+    time = time.time()
     screen.clear()
     screen.addstr('Hit q to quit. Use the w, a, s, and d to move. Position of Motor: %d' %position2)
     screen.addstr('Detected key: ')
@@ -24,9 +26,11 @@ while key != ord('q'):
     if key == ord('w'):
         screen.addstr('w key')
         RPL.servoWrite(motor1, 1000)
+        now = time.time() - time
     if key == ord('s'):
         screen.addstr('k key')
         RPL.servoWrite(motor1, 2000)
+        now = time.time() - time
     if key == ord('a'):
         screen.addstr('a key')
         position2 = position2 + 50
@@ -41,7 +45,7 @@ while key != ord('q'):
         if position2 < 800:
             position2 = 3000
         RPL.servoWrite(motor2, position2)
-    else:
+    if now > 0.01:
         RPL.servoWrite(motor1, 0)
 #to reformat the terminal/end the curses program
 curses.endwin()
