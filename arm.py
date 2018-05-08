@@ -41,7 +41,6 @@ while key != ord('q'):
         if position2 < 800:
             position2 = 3000
         RPL.servoWrite(motor2, position2)
-    key = screen.getch()
     else:
         RPL.servoWrite(motor1, 0)
 #to reformat the terminal/end the curses program
