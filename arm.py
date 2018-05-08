@@ -24,6 +24,9 @@ while key != ord('q'):
     if key == ord('w'):
         screen.addstr('w key')
         RPL.servoWrite(motor1, 1000)
+    if key == ord('s'):
+        screen.addstr('k key')
+        RPL.servoWrite(motor1, 2000)
     if key == ord('a'):
         screen.addstr('a key')
         position2 = position2 + 50
@@ -31,9 +34,6 @@ while key != ord('q'):
         if position2 > 3000:
             position2 = 800
         RPL.servoWrite(motor2, position2)
-    if key == ord('s'):
-        screen.addstr('k key')
-        RPL.servoWrite(motor1, 2000)
     if key == ord('d'):
         screen.addstr('d key')
         position2 = position2 - 50
